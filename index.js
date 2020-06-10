@@ -1,6 +1,7 @@
 const { Builder, By, Key, until } = require( 'selenium-webdriver' );
 const chrome = require( 'selenium-webdriver/chrome' );
 const chromedriver = require( 'chromedriver' );
+const axios = require ( 'axios' );
 
 const { username, pw, browserStackUser, browserStackKey } = require( './credentials' );
 
@@ -30,6 +31,8 @@ module.exports.browserstackInception = async function() {
 
   let baseUrl = 'https://www.browserstack.com/users/sign_in'; 
 
+  let sessionId = ( await driver.getSession() ).getId();
+
   try {
     await driver.get( baseUrl );
     await driver.findElement( By.id( 'accept-cookie-notification' ) ).click();
@@ -57,9 +60,20 @@ module.exports.browserstackInception = async function() {
 
     await delay( 30 * 1000 );
     await driver.switchTo().activeElement().sendKeys( 'browserstack', Key.ENTER );
+    
+    await axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {
+      'status': 'PASSED',
+    })
+    .then( () => console.log( 'Test SUCCESSFUL; Test marked as PASSED' ) )
+    .catch( err => console.log( 'Test SUCCESSFUL; Test did NOT mark as PASSED\n' + err ) );
   }
   catch ( err ) {
-    console.log( err );
+    await axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {
+      'status': 'FAILED',
+      'reason': err,
+    })
+    .then( () => console.log( 'Test FAILED; Test marked as FAILED' ) )
+    .catch( err => console.log( 'Test FAILED; Test did NOT mark as FAILED\n' + err ) );
   }
   finally {
     await delay( 5 * 1000 );
