@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="2">
+
+  <testsuite name="single_test"
+    errors="1" failures="0" hostname="" id="" package="single_test" skipped="10"
+    tests="2" time="3.553" timestamp="">
+  
+    <testcase name="Step 1: Navigate to browserstack sign in page" classname="single_test" time="3.551" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Step 2: Accept cookies if shown" classname="single_test" time="0.002000" assertions="0">
+    <error message="Error while running &#34;visible&#34; command: this.message.includes is not a function" type="error"><![CDATA[
+    TypeError: Error while running &#34;visible&#34; command: this.message.includes is not a function
+    at AssertionInstance.initialize (/usr/local/lib/node_modules/nightwatch/lib/api/assertions/_assertionInstance.js:32:24)
+    at Object.module.exports.create (/usr/local/lib/node_modules/nightwatch/lib/api/assertions/_assertionInstance.js:201:12)
+    at /usr/local/lib/node_modules/nightwatch/lib/api/_loaders/assertion.js:85:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        TypeError: Error while running &#34;visible&#34; command: this.message.includes is not a function
+   - writing an ES6 async test case? - keep in mind that commands return a Promise; 
+   - writing unit tests? - make sure to specify &#34;unit_tests_mode=true&#34; in your config.
+       at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    </system-err>
+  
+
+    
+
+  
+    
+    <testcase
+      name="Step 3: find user email login" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 4: find user password" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 5: submit login" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 6: close local testing popup" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 7: click mac os" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 8: click catalina" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 9: click Chrome verson 83.0" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 10: wait 30 seconds for Chrome session to load" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 11: select active element and search for browserstack" classname="single_test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Step 12: PUT test results to browserstack API" classname="single_test">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

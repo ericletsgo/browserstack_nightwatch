@@ -61,14 +61,14 @@ module.exports.browserstackInception = async function() {
     await delay( 30 * 1000 );
     await driver.switchTo().activeElement().sendKeys( 'browserstack', Key.ENTER );
     
-    await axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {
+    await axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {  
       'status': 'PASSED',
     })
     .then( () => console.log( 'Test SUCCESSFUL; Test marked as PASSED' ) )
     .catch( err => console.log( 'Test SUCCESSFUL; Test did NOT mark as PASSED\n' + err ) );
   }
   catch ( err ) {
-    await axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {
+    axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {
       'status': 'FAILED',
       'reason': err,
     })
