@@ -60,7 +60,6 @@ module.exports = {
             browser
               .setValue( 'id', nodeID.value, 'browserstack' )
               .keys( browser.Keys.ENTER, function ( result ) {
-
                 if ( result.state == 'success' ) {
                   axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {  
                     'status': 'PASSED',
@@ -75,10 +74,10 @@ module.exports = {
                   .then( () => console.log( 'Test FAILED; Test marked as FAILED' ) )
                   .catch( err => console.log( 'Test FAILED; Test did NOT mark as FAILED\n' + err ) );
                 }
-              });
+              })
+              .pause( 5 * 1000 )
+              .end();
           })
       })
-      .pause( 5 * 1000 )
-      .end();
   },
 }
