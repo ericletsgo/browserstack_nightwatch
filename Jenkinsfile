@@ -7,18 +7,19 @@ browserstack('7099d563-b267-4d4a-918f-8250b2ca0ee0') {
     //     }
     // }
     environment { 
-        CI = 'true'
+      CI = 'true'
     }
     stages {
-        stage('Build') {
-            steps {
-                sh 'npm install'
-            }
+      stage('Build') {
+        steps {
+          sh 'npm install'
         }
-        stage('Test') {
-            steps {
-                sh 'npm run single'
-            }
+      }
+      stage('Test') {
+        steps {
+          sh 'npm run single'
         }
+      }
     }
+  }
 }
