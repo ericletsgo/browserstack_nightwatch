@@ -1,4 +1,4 @@
-browserstack('7099d563-b267-4d4a-918f-8250b2ca0ee0') {
+// browserstack('7099d563-b267-4d4a-918f-8250b2ca0ee0') {
   spipeline {
     // agent {
     //     docker {
@@ -22,4 +22,4 @@ browserstack('7099d563-b267-4d4a-918f-8250b2ca0ee0') {
       }
     }
   }
-}
+// }
