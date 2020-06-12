@@ -5,33 +5,19 @@
 
   <testsuite name="single_test"
     errors="0" failures="0" hostname="" id="" package="single_test" skipped="0"
-    tests="7" time="60.05" timestamp="">
+    tests="7" time="67.70" timestamp="">
   
-    <testcase name="Step 1: Navigate to browserstack sign in page" classname="single_test" time="6.382" assertions="2">
+    <testcase name="Step 1: Navigate to browserstack sign in page" classname="single_test" time="7.747" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Step 2: Accept cookies if shown" classname="single_test" time="1.572" assertions="0">
+    <testcase name="Step 2: Accept cookies if shown" classname="single_test" time="0.6690" assertions="0">
     </testcase>
   
-    <testcase name="Step 3: input login credentials and submit" classname="single_test" time="6.171" assertions="3">
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Step 4: close local testing popup" classname="single_test" time="4.270" assertions="1">
-
-    
-    </testcase>
-  
-    <testcase name="Step 5: select configuration" classname="single_test" time="2.544" assertions="3">
+    <testcase name="Step 3: input login credentials and submit" classname="single_test" time="6.224" assertions="3">
 
     
 
@@ -40,10 +26,24 @@
     
     </testcase>
   
-    <testcase name="Step 6: wait for Chrome session to load" classname="single_test" time="30.00" assertions="0">
+    <testcase name="Step 4: close local testing popup" classname="single_test" time="7.564" assertions="1">
+
+    
     </testcase>
   
-    <testcase name="Step 7: select active element and search for browserstack and PUT to browserstack API" classname="single_test" time="9.104" assertions="0">
+    <testcase name="Step 5: select configuration" classname="single_test" time="7.409" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Step 6: wait for Chrome session to load" classname="single_test" time="30.01" assertions="0">
+    </testcase>
+  
+    <testcase name="Step 7: select active element and search for browserstack and PUT to browserstack API" classname="single_test" time="8.086" assertions="0">
     </testcase>
   
 
