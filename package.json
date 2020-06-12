@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "single": "nightwatch -c conf/single.conf.js",
+    "parallel": "nightwatch -c conf/parallel.conf.js -e chrome,firefox,ie"
   },
   "repository": {
     "type": "git",

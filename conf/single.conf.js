@@ -17,7 +17,7 @@ nightwatch_config = {
         'browser': 'chrome',
         'os': 'OS X',
         'os_version': 'Catalina',
-        'name': 'Bstack-[Nightwatch] Sample Test'
+        'name': 'Inception-[Nightwatch] OS X Chrome'
       },
     }
   }

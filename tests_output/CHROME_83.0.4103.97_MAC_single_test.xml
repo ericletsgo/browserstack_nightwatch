@@ -1,62 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
-            tests="5">
+            failures="0"
+            tests="7">
 
   <testsuite name="single_test"
-    errors="0" failures="1" hostname="" id="" package="single_test" skipped="3"
-    tests="5" time="22.45" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="single_test" skipped="0"
+    tests="7" time="55.88" timestamp="">
   
-    <testcase name="Step 1: Navigate to browserstack sign in page" classname="single_test" time="7.986" assertions="2">
+    <testcase name="Step 1: Navigate to browserstack sign in page" classname="single_test" time="7.452" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Step 2: Accept cookies if shown" classname="single_test" time="2.092" assertions="0">
+    <testcase name="Step 2: Accept cookies if shown" classname="single_test" time="0.7910" assertions="0">
     </testcase>
   
-    <testcase name="Step 3: input login credentials and submit" classname="single_test" time="6.291" assertions="3">
+    <testcase name="Step 3: input login credentials and submit" classname="single_test" time="3.383" assertions="3">
 
     
 
     
-
-    
-    </testcase>
-  
-    <testcase name="Step 4: close local testing popup" classname="single_test" time="0.4540" assertions="0">
-    </testcase>
-  
-    <testcase name="Step 5: select configuration" classname="single_test" time="5.631" assertions="1">  <failure message="Timed out while waiting for element &lt;//*[@id=&#34;rf-os-list-wrapper&#34;]/nav/ul/ul[2]/li&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5627ms)">    at Object.Step 5: select configuration (/Users/matchstik/Desktop/browserstack_onboard/browserstack_nightwatch/tests/single/single_test.js:43:8)
-    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
 
     
     </testcase>
   
+    <testcase name="Step 4: close local testing popup" classname="single_test" time="5.661" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Step 5: select configuration" classname="single_test" time="2.560" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Step 6: wait for Chrome session to load" classname="single_test" time="30.00" assertions="0">
+    </testcase>
+  
+    <testcase name="Step 7: select active element and search for browserstack and PUT to browserstack API" classname="single_test" time="6.031" assertions="0">
+    </testcase>
+  
 
   
 
     
 
-  
-    
-    <testcase
-      name="Step 6: wait for Chrome session to load" classname="single_test">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Step 7: select active element and search for browserstack" classname="single_test">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Step 9: PUT test results to browserstack API" classname="single_test">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>

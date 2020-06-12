@@ -51,15 +51,17 @@ module.exports = {
     let sessionId;
 
     browser
-      .session( function ( session ) {
+      .session( function ( session, err ) {
         sessionId = session.sessionId;
+        // if ( err ) console.log('SESSION ERROR --->', err);
       })
       .elementActive( function ( result ) {
         browser
           .elementIdAttribute( result.value.ELEMENT, 'id', function ( nodeID ) {
             browser
               .setValue( 'id', nodeID.value, 'browserstack' )
-              .keys( browser.Keys.ENTER, function ( result ) {
+              .keys( browser.Keys.ENTER, function ( result, err ) {
+                if ( err ) console.log('KEYS ERROR --->', err)
                 if ( result.state == 'success' ) {
                   axios.put( `https://${browserStackUser}:${browserStackKey}@api.browserstack.com/automate/sessions/${sessionId}.json`, {  
                     'status': 'PASSED',
@@ -74,10 +76,10 @@ module.exports = {
                   .then( () => console.log( 'Test FAILED; Test marked as FAILED' ) )
                   .catch( err => console.log( 'Test FAILED; Test did NOT mark as FAILED\n' + err ) );
                 }
-              })
-              .pause( 5 * 1000 )
-              .end();
-          })
+              });
+          });
       })
+      .pause( 5 * 1000 )
+      .end();
   },
-}
+};
